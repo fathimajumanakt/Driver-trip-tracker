@@ -1,0 +1,6 @@
+.streamlit/secrets.toml
+driver_tracker.db
+app_backup.py
+app_old.py
+__pycache__/
+*.pyc
