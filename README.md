@@ -1,4 +1,4 @@
-# Smart Driver Trip & Salary Tracker
+# Driver Trip & Salary Tracker
 
 ## Run on Windows
 
