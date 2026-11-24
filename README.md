@@ -1,49 +1,112 @@
-# Driver Trip & Salary Tracker
+# 🚗 Driver Trip & Salary Tracker
 
-## Run on Windows
+A web-based application developed using Python and Streamlit to manage company drivers' daily trips, travel expenses, payments and monthly salary calculations.
 
-1. Install Python.
-2. Open PowerShell in this folder.
-3. Install packages:
+The application uses Supabase as its cloud database to store and manage driver trip records securely.
 
-   ```powershell
-   py -m pip install -r requirements.txt
-   ```
+##  Project Overview
 
-4. Start the app:
+Managing daily driver trips, expenses and salary calculations manually can be time-consuming.
 
-   ```powershell
-   py -m streamlit run app.py
-   ```
+The Driver Trip & Salary Tracker simplifies this process by providing a centralized platform to record trips, monitor expenses, track payments and calculate monthly driver earnings.
 
-5. Open the local address Streamlit displays (usually http://localhost:8501).
+##  Key Features
 
-## First login
+- **Driver Management:** Manage driver information and records.
+- **Daily Trip Tracking:** Record daily trips, travel dates, destinations and kilometres travelled.
+- **Expense Management:** Track toll charges and parking expenses.
+- **Payment Tracking:** Differentiate between Cash and Credit payments.
+- **Night Bata:** Record additional allowances for night travel.
+- **Monthly Salary Calculation:** Track driver earnings and monthly adjustments.
+- **Edit & Delete Records:** Update or remove incorrect trip entries.
+- **Cloud Database:** Store and retrieve records using Supabase.
+- **Data Persistence:** Access saved records even after restarting the application.
 
-- Username: `admin`
-- Password: `admin12345`
+##  Technologies Used
 
-Change the admin password immediately from the Password tab.
+| Technology | Purpose |
+|---|---|
+| Python | Backend programming |
+| Streamlit | Web application development |
+| Supabase | Cloud database and data storage |
+| PostgreSQL | Database management |
+| Pandas | Data manipulation and processing |
 
-## Workflow
+##  Database Structure
 
-1. Log in as admin and create driver accounts.
-2. Set the company's confirmed rate per kilometre, night bata and allowance.
-3. Give each driver their username and temporary password.
-4. Drivers log in from their phones/computers and add one completed trip after each journey.
-5. Admin reviews company trip records and enters monthly advances, deductions, extra allowances and salary payments.
-6. Drivers can see their own monthly summary and download trip CSV data.
+The application uses Supabase with the following tables:
 
-## Important calculation rules
+- `users` – User information and authentication-related data.
+- `trips` – Daily driver trip records.
+- `monthly_adjustments` – Monthly salary adjustments.
+- `settings` – Application settings.
 
-- KM earnings = total recorded KM × company rate per KM.
-- Night bata = eligible night count × night bata rate.
-- Net salary = KM earnings + night bata + allowances − advance − deductions.
-- Cash and Credit are client payment categories, not driver salary.
-- Toll, parking, fuel and other trip expenses are tracked separately and are not automatically added to salary.
-- This starter version does not decide the company's actual rates or legal payroll rules. Admin must enter the confirmed company policy.
+##  Project Structure
 
-## Data and deployment
+```text
+Driver-Trip-Tracker/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-The app creates `driver_tracker.db` in the same folder. Keep this file backed up.
-This is a starter prototype, not a production-hardened payroll platform. A local SQLite database is suitable for local testing, but not for multiple remote drivers accessing separate copies of the app. For internet deployment, use one shared hosted database, HTTPS, secure secret management, database backups, and production-grade authentication/access controls.
+##  Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd Driver-Trip-Tracker
+```
+
+### 3. Install Dependencies
+
+```bash
+py -m pip install -r requirements.txt
+```
+
+### 4. Configure Supabase
+
+- Create a project in Supabase.
+- Configure the required database tables.
+- Add your Supabase project URL and API key to your application's environment or Streamlit secrets configuration.
+- Make sure the configuration matches the variable names used in `app.py`.
+
+**Important:** Never upload your Supabase secret keys, passwords or private credentials to GitHub.
+
+### 5. Run the Application
+
+```bash
+py -m streamlit run app.py
+```
+
+The application will open in your browser at:
+
+```text
+http://localhost:8501
+```
+
+##  Deployment
+
+The application can be deployed using Streamlit Community Cloud.
+
+Supabase is used as the cloud database, allowing trip records to remain stored independently of the Streamlit application.
+
+##  Project Objective
+
+The main objective of this project is to simplify driver trip management, reduce manual record-keeping and improve the accuracy of expense and salary calculations.
+
+##  Developed By
+
+**Fathima Jumana**
+
+
+
+
