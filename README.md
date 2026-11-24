@@ -173,10 +173,13 @@ The application can be deployed using Streamlit Community Cloud.
 
 Supabase is used as the cloud database, allowing trip records to remain stored independently of the Streamlit application.
 
-##  Application Screenshots
+## 📸 Application Screenshots
 
-Screenshots of the desktop and mobile interfaces can be added here to demonstrate the application's design and functionality.
+### Admin Dashboard
 
+The admin dashboard provides an overview of total kilometres, trips, payments, travel days and recorded expenses.
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
 ## 🎯 Project Objectives
 
 - Simplify daily driver trip management.
